@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, url 
-from kanban.views import index
+from django.urls import path 
+from kanban import views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', 'index', name='index'),
+    path('',views.index)
+    
 ]

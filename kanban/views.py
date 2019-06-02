@@ -3,7 +3,6 @@ from kanban.models import Issues
 # Create your views here.
 
 def index(request):
-    iss = Issues.objects.get.all()
     if request.method == "POST":
         if "add" in request.POST:
             desc = request.POST["desc"]
@@ -16,4 +15,4 @@ def index(request):
             bklog = Issues.objects.filter(id= desc)
             bklog.delete()
 
-    return render(request, "index.html", iss )
+    return render(request, 'index.html' )
